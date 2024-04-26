@@ -1,11 +1,11 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
-import { Link as LinkR } from "react-router-dom";
+// import { Link as LinkR } from "react-router-dom";
 import { DiCssdeck } from "react-icons/di";
 import { FaBars } from "react-icons/fa";
 import { Bio } from "../../data/constants";
-import { MenuRounded } from "@mui/icons-material";
-import Experience from "../Experience";
+// import { MenuRounded } from "@mui/icons-material";
+// import Experience from "../Experience";
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -146,16 +146,16 @@ const MobileMenu = styled.div`
   z-index: ${({ open }) => (open ? "1000" : "-1000")};
 `;
 
-const MobileMenuLinks = styled(LinkR)`
-  color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
-`;
+// const MobileMenuLinks = styled(LinkR)`
+//   color: ${({ theme }) => theme.text_primary};
+//   font-weight: 500;
+//   cursor: pointer;
+//   text-decoration: none;
+//   transition: all 0.2s ease-in-out;
+//   &:hover {
+//     color: ${({ theme }) => theme.primary};
+//   }
+// `;
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -217,9 +217,9 @@ const Navbar = () => {
           <NavLink onClick={() => setOpen(!open)} href="#projects">
             Projects
           </NavLink>
-          <NavLink onClick={() => setOpen(!open)} href="#education">
+          {/* <NavLink onClick={() => setOpen(!open)} href="#education">
             Education
-          </NavLink>
+          </NavLink> */}
           <GithubButton
             href={Bio.github}
             target="_blank"
